@@ -22,19 +22,20 @@
     </div>
     </div>
 
-    <div class="container-fluid" style="margin-top:20px;">
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title">Web Dev</h4>
-    <h5 class="card-title">Company Name</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><h6 class="card-title">Skills Required: </h6>HTML, CSS, PHP</li>
-    <li class="list-group-item"><h6 class="card-title">Job Location: </h6>Delhi, Pune</li>
-    <li class="list-group-item"><h6 class="card-title">CTC: </h6>3.5 LPA</li>
-  </ul>
-</div>
+    <div class="row">
+    <?php
+
+$sql="SELECT `cname`, `position`, `Jdesc`,`skills`,`CTC` FROM 'jobs'";
+$result = mysqli_query($conn,$sql);
+$i=0;
+if($result->num_rows>0){
+    // output data of each row
+    while($row=$result->fetch_assoc()){ 
+       
+}} else{
+    echo "";
+}
+?>
     </div>
 
 
