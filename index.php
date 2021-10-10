@@ -3,7 +3,7 @@
 
 <!-- Page content -->
 <div class="content">
-    <br><br><br>
+    <br><br><br><br>
     <p>
         <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
             aria-controls="collapseExample">
@@ -48,11 +48,11 @@
         </thead>
         
             <?php
-
-                $sql="SELECT `cname`, `position`,`CTC` FROM 'jobs'";
+                $sql="SELECT `cname`, `position`,`CTC` FROM `jobs`";
                 $result = mysqli_query($conn,$sql);
                 $i=0;
-                if($result->num_rows>0){
+                if ($result->num_rows > 0){
+                
                     // output data of each row
                     while($rows=$result->fetch_assoc()){ 
                         echo "
@@ -62,12 +62,12 @@
                         <td>".$rows['cname']."</td>
                         <td>".$rows['position']."</td>
                         <td>".$rows['CTC']."</td>
-                        </tr>";
+                        </tr>
+                        </tbody>";
                 }} else{
-                    echo "";
+                    echo "failed to post $sql.".mysqli_error($conn);
                 }
             ?>
-        </tbody>
     </table>
 </div>
 </div>
