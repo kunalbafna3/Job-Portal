@@ -1,7 +1,7 @@
 # Job Portal
 
 ### Description
-- Homepage of the food delivering website.
+- Job portal which is same as career page you see on the companies websites where you can post and see jobs.
 - Please visit this link for the live view: https://kunalbafna3.github.io/Omnifood/
  
 ### Technology used
